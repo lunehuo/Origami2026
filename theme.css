@@ -4839,10 +4839,10 @@ img {
 /* callouts
 */
 .callout {
-    /* background: linear-gradient(135deg, rgba(var(--callout-color), .3), rgba(var(--callout-color), .6)) !important; */
-    background: rgba(var(--callout-color), .1);
+    /* background: linear-gradient(135deg, color-mix(in srgb, var(--callout-color) 30%, transparent), color-mix(in srgb, var(--callout-color) 60%, transparent)) !important; */
+    background: color-mix(in srgb, var(--callout-color) 10%, transparent);
     position: relative;
-    border: 1px dashed rgba(var(--callout-color), 1) !important;
+    border: 1px dashed color-mix(in srgb, var(--callout-color) 100%, transparent) !important;
     box-shadow: none;
     border-radius: var(--radius-l);
     backdrop-filter: blur(16px);
@@ -4888,7 +4888,7 @@ img {
 .callout[data-callout="bug"],
 .callout[data-callout="quote"],
 .callout[data-callout="cite"] {
-    color: rgb(var(--callout-color));
+    color: var(--callout-color);
 }
 
 .markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget):hover {
@@ -5342,9 +5342,9 @@ body {
   }
   .callout[data-callout~=aside] {
 	--callout-color:
+	  rgb(0,
 	  0,
-	  0,
-	  0;
+	  0);
 	--callout-icon: none;
 	--move: 0;
 	background-color: var(--aside-background);
